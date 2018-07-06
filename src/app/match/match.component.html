@@ -1,0 +1,31 @@
+<div xmlns="">
+  <h5>Q{{this.qno+1}}.{{quiz.quiz[this.qno].question}}</h5>
+</div>
+<div class="divider"></div>
+<div class="col s12 m12 l12">
+  <br>
+  <div class="row">
+    <div class="col s6 m6 l6">
+      <ul id="fixed" class="collection">
+        <li class="item collection-item" *ngFor="let sots of quiz.quiz[this.qno].column">
+          <div class="">
+            {{quiz.quiz[this.qno].column.indexOf(sots)+1}}. {{sots}}
+          </div>
+          <div class="row"></div>
+        </li>
+        <div id="re"><input type="number" value="1234" (change)="myFun($event)" id="res"></div>
+      </ul>
+    </div>
+    <div class="col s6 m6 l6">
+  <ul id="sortable" class="collection">
+    <li class="item collection-item" *ngFor="let sots of quiz.replies[this.qno].ans" (mousemove)="myFun($event)"
+        id="{{sots}}">
+      <div class="">
+        {{sots}}. {{quiz.quiz[this.qno].answers[sots-1]}}
+      </div>
+      <div class="row"></div>
+    </li>
+    <div id="hid" style="display: none;"><input type="number" value="1234" (change)="myFun($event)" id="res"></div>
+  </ul>
+    </div>
+</div>

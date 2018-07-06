@@ -1,0 +1,23 @@
+<div>
+  <h5>Q{{this.qno+1}}.{{quiz.quiz[this.qno].question}}</h5>
+</div>
+<div class="divider"></div>
+<div class="col s12 m12 l12">
+  <br>
+  <p>
+    <input (click)="storeAnswer(quiz.quiz[this.qno].opt1.id)" type="radio" id="1" name="ans" value="{{quiz.quiz[this.qno].opt1.ans}}"/>
+    <label for="1">{{quiz.quiz[this.qno].opt1.ans}}</label>
+  </p><br>
+  <p>
+    <input (click)="storeAnswer(quiz.quiz[this.qno].opt2.id)" class="answers" type="radio" id="2" name="ans" value="{{quiz.quiz[this.qno].opt2.ans}}"/>
+    <label for="2">{{quiz.quiz[this.qno].opt2.ans}}</label>
+  </p><br>
+  <p>
+    <input (click)="storeAnswer(quiz.quiz[this.qno].opt3.id)" class="answers" type="radio" id="3" name="ans" value="{{quiz.quiz[this.qno].opt3.ans}}"/>
+    <label for="3">{{quiz.quiz[this.qno].opt3.ans}}</label>
+  </p><br>
+  <p>
+    <input (click)="storeAnswer(quiz.quiz[this.qno].opt4.id)" class="answers" type="radio" id="4" name="ans" value="{{quiz.quiz[this.qno].opt4.ans}}"/>
+    <label for="4">{{quiz.quiz[this.qno].opt4.ans}}</label>
+  </p><br>
+</div>

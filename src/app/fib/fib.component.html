@@ -1,0 +1,10 @@
+<div xmlns="">
+  <h5>
+    <div>Q{{this.qno+1}}.{{quiz.quiz[this.qno].question}}</div>
+  </h5>
+
+  <div style="float: left;margin-top: 11px;">{{quiz.quiz[this.qno].question_part1}}</div>
+  <div style="float: left;"><input type="text" id="fib" style="width: 150px;margin-left: 5px;" (change)="updateAns()"></div>
+  <div style="margin-top: 21px;">{{quiz.quiz[this.qno].question_part2}}</div>
+
+</div>
